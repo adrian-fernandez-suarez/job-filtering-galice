@@ -1,42 +1,231 @@
-#root {
-  max-width: 1280px;
+@import"https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap";body {
+  font-family: League Spartan,sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #effafa
+}
+
+.app-container {
+  width: 1110px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin-bottom: 1rem
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header-banner {
+  width: 100vw;
+  height: 156px;
+  background: url(/images/bg-header-desktop.svg) #5ca5a5;
+  margin-bottom: 50px
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.jobs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px
+}
+
+.job-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 15px 20px -5px #0d718226
+}
+
+.jobs-info-section {
+  display: flex
+}
+
+.job-logo {
+  width: 88px;
+  height: 88px;
+  align-self: center;
+  margin-right: 20px
+}
+
+.filter-list-container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 15px 20px -5px #0d718226;
+  padding: .5rem 1rem;
+  transform: translateY(-75px)
+}
+
+.filter-tags-container {
+  display: flex;
+  gap: 10px
+}
+
+.filterTag-container {
+  display: flex;
+  height: 32px;
+  width: 113px
+}
+
+.filterTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px 0 0 4px;
+  background: rgba(92,165,165,.10000000149011612);
+  height: 32px;
+  width: 113px;
+  color: #5ca5a5;
+  font-weight: 700
+}
+
+.filterTag-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+  background-color: #5ca5a5;
+  color: #fff
+}
+
+.filterTag-btn:hover {
+  cursor: pointer;
+  background-color: #2b3939
+}
+
+.filterTag-clear {
+  color: #5ca5a5;
+  font-size: 16px
+}
+
+.filterTag-clear:hover {
+  cursor: pointer;
+  text-decoration: underline
+}
+
+.jobInfo-container {
+  display: flex;
+  flex-direction: column
+}
+
+.jobInfo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.jobInfo-header-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  height: 24px;
+  font-weight: 700;
+  padding: .1rem 1rem;
+  font-size: 14px
+}
+
+.jobInfo-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7c8f8f;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -.138px
+}
+
+.jobTags-container {
+  display: flex;
+  gap: 16px
+}
+
+.jobTag {
+  background: rgba(92,165,165,.10000000149011612);
+  color: #5ca5a5;
+  width: 81px;
+  height: 32px;
+  font-weight: 700;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.jobTag:hover {
+  cursor: pointer;
+  background: #5ca5a5;
+  color: #fff
+}
+
+.jobInfo-company {
+  color: #5ca5a5;
+  font-size: 18px;
+  font-weight: 700
+}
+
+.jobInfo-title {
+  color: #5ca5a5;
+  font-size: 22px;
+  font-weight: 700
+}
+
+.oval {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: #b7c4c4
+}
+
+@media (max-width: 450px) {
+  .app-container {
+      width:360px
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-banner {
+      background: url(/images/bg-header-mobile.svg) #5ca5a5
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .jobs-container {
+      gap: 40px
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .job-container {
+      flex-direction: column
+  }
 
-.read-the-docs {
-  color: #888;
+  .jobTags-container {
+      flex-flow: row wrap;
+      border-top: 1px solid #b7c4c4;
+      padding: 1rem 0
+  }
+
+  .job-logo {
+      transform: translateY(-35px);
+      align-self: flex-start;
+      width: 65px;
+      height: 65px
+  }
+
+  .jobs-info-section {
+      flex-direction: column;
+      width: 100%
+  }
+
+  .filter-tags-container {
+      flex-flow: row wrap
+  }
+
+  .filterTag-clear {
+      color: #7c8f8f
+  }
+
+  .filterTag-btn:hover {
+      background-color: #5ca5a5
+  }
+
+  .jobTag:hover {
+      background: rgba(92,165,165,.10000000149011612);
+      color: #5ca5a5
+  }
 }
